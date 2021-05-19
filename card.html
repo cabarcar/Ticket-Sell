@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/cardstyle.css">
+    <title>C-Tickets</title>
+</head>
+<body>
+    
+    <div class="contenedor">
+
+		<!-- Tarjeta -->
+		<section class="tarjeta" id="tarjeta">
+			<div class="delantera">
+				<div class="logo-marca" id="logo-marca">
+					<!-- <img src="img/logos/visa.png" alt=""> -->
+				</div>
+				<img src="assets/img/chip-tarjeta.png" class="chip" alt="">
+				<div class="datos">
+					<div class="grupo" id="numero">
+						<p class="label">Card Number</p>
+						<p class="numero">#### #### #### ####</p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="nombre">
+							<p class="label">Name</p>
+							<p class="nombre">Cesar Abarca</p>
+						</div>
+
+						<div class="grupo" id="expiracion">
+							<p class="label">Expiration</p>
+							<p class="expiracion"><span class="mes">MM</span> / <span class="year">YY</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="trasera">
+				<div class="barra-magnetica"></div>
+				<div class="datos">
+					<div class="grupo" id="firma">
+						<p class="label">Firm</p>
+						<div class="firma"><p></p></div>
+					</div>
+					<div class="grupo" id="ccv">
+						<p class="label">CCV</p>
+						<p class="ccv"></p>
+					</div>
+				</div>
+				<p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
+				<a href="#" class="link-banco">www.tubanco.com</a>
+			</div>
+		</section>
+
+		<!-- Contenedor Boton Abrir Formulario -->
+		<div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+
+		<!-- Formulario -->
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+
+			<div class="grupo">
+				<label for="inputNumero">Card Number</label>
+				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Name</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiration</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option value="" selected="selected">Month</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option value="" selected="selected">Year</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="grupo ccv">
+					<label for="inputCCV">CCV</label>
+					<input type="text" id="inputCCV" maxlength="3">
+				</div>
+
+			</div>
+
+
+
+			<div class="grupo venta">
+				<label for="selectVenta">Ticket</label>
+				<div class="flexbox2">
+					<div class="grupo-select2">
+						<select name="concert" id="selectConcert">
+							<option value="" selected="selected">Event</option>
+							<option value="Live Out">Live Out Festival</option>
+							<option value="Vaiven">Vaiven Festival</option>
+							<option value="Roskilde">Roskilde Festival</option>
+						</select>
+						<i class="fas fa-angle-down"></i>
+					</div>
+					<div class="grupo-select2">
+						<select name="boleto" class="monto" id="selectBoleto">
+							<option value="" selected="selected">Zone</option>
+							<option value="1400">General - $1400</option>
+							<option value="2500">VIP - $2500</option>
+						</select>
+						<i class="fas fa-angle-down"></i>
+					</div>
+					<div class="grupo-select2">
+						<select name="many" class="monto" id="selectMany">
+							<option value="" selected="selected">How Many</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+						<i class="fas fa-angle-down"></i>
+					</div>
+				</div>
+			</div>
+			<div class="grupo total">
+				<label for="inputTotal">Total</label>
+				<input type="text" id="inputTotal" disabled>
+			</div>
+			<div class="grupo">
+				<label for="inputEmail">Email</label>
+				<input type="text" id="inputEmail" class="inputEmail" autocomplete="off">
+				<span id="emailOk"></span>
+			</div>
+
+			<button type="submit" id="btn-enviar" class="btn-enviar">Send</button>
+
+		</form>
+	</div>
+
+
+
+
+
+
+
+
+
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
